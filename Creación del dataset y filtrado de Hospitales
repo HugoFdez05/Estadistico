@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv("C:/Users/hfdez/Python/Proyecto I/activaciones_samur_2024.csv", sep=";")
+df
+# Lista de hospitales específicos que me interesa seleccionar
+hospitales_seleccionados = ["La Paz", "Gregorio Marañón", "Doce de Octubre", "Ramón y Cajal"]
+# Filtramos el dataset unicamente para nuestros 4 hospitales
+df_filtrado = df[df['Hospital'].isin(hospitales_seleccionados)]
+
+# Mostrar el DataFrame filtrado
+df_filtrado
